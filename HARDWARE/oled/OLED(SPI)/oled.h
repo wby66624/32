@@ -6,7 +6,7 @@
 #include "stdio.h"
 
 
-#define SIZE 12
+#define SIZE 16
 #define XLevelL		0x00
 #define XLevelH		0x10
 #define Max_Column	128

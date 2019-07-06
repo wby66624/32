@@ -3,36 +3,95 @@
 <pre>
 <h1>礦ision Build Log</h1>
 <h2>Tool Versions:</h2>
-IDE-Version: μVision V5.14.0.0
-Copyright (C) 2015 ARM Ltd and ARM Germany GmbH. All rights reserved.
-License Information: w wby, w, LIC=GE7GK-Z4CD5-XC5J0-BH4WH-R27WE-6MLHL
+IDE-Version: μVision V5.18.0.0
+Copyright (C) 2016 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: 12 12, 12, LIC=IK1CX-HSS8D-ARAXW-QI7KE-DCALZ-CAJW8
  
 Tool Versions:
-Toolchain:       MDK-ARM Professional  Version: 5.14.0.0
-Toolchain Path:  C:\Users\wby\Downloads\keil 5\ARM\ARMCC\Bin
-C Compiler:      Armcc.exe V5.05 update 1 (build 106)
-Assembler:       Armasm.exe V5.05 update 1 (build 106)
-Linker/Locator:  ArmLink.exe V5.05 update 1 (build 106)
-Library Manager: ArmAr.exe V5.05 update 1 (build 106)
-Hex Converter:   FromElf.exe V5.05 update 1 (build 106)
-CPU DLL:         SARMCM3.DLL V5.14.0.0
-Dialog DLL:      DCM.DLL V1.13.1.0
-Target DLL:      Segger\JL2CM3.dll V2.99.13.0
-Dialog DLL:      TCM.DLL V1.14.4.0
+Toolchain:       MDK-ARM Standard  Version: 5.18
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 1 (build 61)
+Assembler:       Armasm.exe V5.06 update 1 (build 61)
+Linker/Locator:  ArmLink.exe V5.06 update 1 (build 61)
+Library Manager: ArmAr.exe V5.06 update 1 (build 61)
+Hex Converter:   FromElf.exe V5.06 update 1 (build 61)
+CPU DLL:         SARMCM3.DLL V5.18
+Dialog DLL:      DCM.DLL V1.13.6.0
+Target DLL:      Segger\JL2CM3.dll V2.99.18.0
+Dialog DLL:      TCM.DLL V1.14.8.0
  
 <h2>Project:</h2>
-C:\A2019国赛\2015年国赛程序\F103ZET6_hz100\USER\OLED.uvprojx
-Project File Date:  07/02/2019
+E:\Desktop\32\32\USER\OLED.uvprojx
+Project File Date:  07/06/2019
 
 <h2>Output:</h2>
+*** Using Compiler 'V5.06 update 1 (build 61)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'Target 1'
-"..\OBJ\OLED.axf" - 0 Error(s), 0 Warning(s).
+compiling stm32f10x_it.c...
+compiling system_stm32f10x.c...
+compiling spwm.c...
+compiling timer.c...
+compiling adc.c...
+compiling feedback.c...
+compiling main.c...
+main.c(50): warning:  #223-D: function "TIM2_PWM_Init" declared implicitly
+  	TIM2_PWM_Init(rrr,0);
+main.c(52): warning:  #223-D: function "TIM3_Int_Init" declared implicitly
+  	TIM3_Int_Init(4999,10);
+main.c: 2 warnings, 0 errors
+compiling stack.c...
+..\HARDWARE\oled\Stack\stack.c(8): warning:  #177-D: variable "size" was declared but never referenced
+  	int size = sizeof(stack->data) / sizeof(stack->data[0]);//?玫????榈某ざ?
+..\HARDWARE\oled\Stack\stack.c: 1 warning, 0 errors
+compiling Queue.c...
+compiling dma.c...
+compiling stmflash.c...
+..\HARDWARE\STMFLASH\stmflash.c(35): warning:  #223-D: function "FLASH_ProgramHalfWord" declared implicitly
+  		FLASH_ProgramHalfWord(WriteAddr,pBuffer[i]);
+..\HARDWARE\STMFLASH\stmflash.c(57): warning:  #223-D: function "FLASH_Unlock" declared implicitly
+  	FLASH_Unlock();						//????
+..\HARDWARE\STMFLASH\stmflash.c(72): warning:  #223-D: function "FLASH_ErasePage" declared implicitly
+  			FLASH_ErasePage(secpos*STM_SECTOR_SIZE+STM32_FLASH_BASE);//?脸??飧?????
+..\HARDWARE\STMFLASH\stmflash.c(91): warning:  #223-D: function "FLASH_Lock" declared implicitly
+  	FLASH_Lock();//????
+..\HARDWARE\STMFLASH\stmflash.c: 4 warnings, 0 errors
+compiling oled.c...
+compiling led.c...
+compiling delay.c...
+compiling menu.c...
+..\HARDWARE\oled\menu\menu.c(145): warning:  #223-D: function "OLED_Refresh_Gram" declared implicitly
+  		OLED_Refresh_Gram();
+..\HARDWARE\oled\menu\menu.c(306): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "u8 *"
+  			OLED_ShowString(10, CountLine(location), ap);//??示
+..\HARDWARE\oled\menu\menu.c(310): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "u8 *"
+  			OLED_ShowString(10, CountLine(location), name);//??示
+..\HARDWARE\oled\menu\menu.c(436): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "u8 *"
+  		OLED_ShowString(sa, 0, nowPage->page);//???票???
+..\HARDWARE\oled\menu\menu.c: 4 warnings, 0 errors
+compiling key.c...
+assembling startup_stm32f10x_hd.s...
+compiling usart.c...
+compiling sys.c...
+compiling core_cm3.c...
+compiling misc.c...
+compiling stm32f10x_gpio.c...
+compiling stm32f10x_usart.c...
+compiling stm32f10x_rcc.c...
+compiling stm32f10x_tim.c...
+compiling stm32f10x_dma.c...
+compiling stm32f10x_adc.c...
+compiling stm32f10x_flash.c...
+linking...
+Program Size: Code=28134 RO-data=2910 RW-data=724 ZI-data=8276  
+FromELF: creating hex file...
+"..\OBJ\OLED.axf" - 0 Error(s), 11 Warning(s).
 
 <h2>Collection of Component include folders:</h2>
-  C:\A2019国赛\2015年国赛程序\F103ZET6_hz100\USER\RTE
-  C:\Users\wby\Downloads\keil 5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include
+  E:\Desktop\32\32\USER\RTE
+  C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.0.0\Device\Include
 
 <h2>Collection of Component Files used:</h2>
+Build Time Elapsed:  00:00:10
 </pre>
 </body>
 </html>
